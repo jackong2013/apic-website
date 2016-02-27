@@ -6,3 +6,6 @@ app = Flask(__name__)
 def landing_page():
 	url_for('static', filename='style.css')
 	return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run()
