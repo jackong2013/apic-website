@@ -4,9 +4,5 @@ app = Flask(__name__)
 
 @app.route('/')
 def landing_page():
+    print url_for('static', filename='style.css')
     return render_template('index.html')
-
-url_for('static', filename='style.css')
-
-if __name__ == '__main__':
-    app.run()
