@@ -48,3 +48,4 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+static/img/api-logo.xcf
