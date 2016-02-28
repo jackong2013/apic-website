@@ -170,8 +170,19 @@ a.light {
 }
 
 .incoming-list {
+	background-color: #EFEFEF;
 	margin: 0px;
+	height: 100%;
 	padding: 0px;
+	overflow-y: scroll;
+}
+
+.arriving-in {
+	text-align: right;
+}
+
+.arriving-in span{
+	font-size: 15px;
 }
 
 .incoming-person {
@@ -180,12 +191,17 @@ a.light {
 	margin: 0px;
 	padding-top: 15px;
 	padding-left: 20px;
+	padding-right: 20px;
 	font-size: 20px;
 	border-top: 1px solid black 
 }
 
 .incoming-person:first-of-type {
 	border-top: 0px;
+}
+
+.incoming-person:hover {
+	cursor: pointer;
 }
 
 .incoming-person p{

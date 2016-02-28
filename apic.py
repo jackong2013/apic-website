@@ -18,7 +18,7 @@ MERCHANT_DATA = {
                  "eta": "10mins" },
                { "name": "Leo Sjahputra", 
                  "eta": "14mins" },
-               { "name": "Leo Sjahputra", 
+               { "name": "Chua Chin Siang", 
                  "eta": "14mins" }]
 }
 

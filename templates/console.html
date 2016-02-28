@@ -63,8 +63,10 @@
 					<div class="incoming">
 						<ul class="incoming-list">
 							{% for person in data.incoming %}
-								<div class="incoming-person">
-									<li id="{{ person.name }}"><p>{{ person.name }} arriving in {{ person.eta }}</p></li>
+								<div class="incoming-person" id="{{ person.name }}">
+									<li>
+										<p>{{ person.name }} </p>
+										<p class='arriving-in'><span> arriving in </span>{{ person.eta }}</p></li>
 								</div>
 							{% endfor %}
 						</ul>
@@ -109,6 +111,7 @@
 <script type="text/javascript">
 	$(".main-content#my-space").css("display", "block");
 	$(".menu-item#my-space").css("background-color", "#FFFFFF");
+	$("div.incoming-person:first-child").css("background-color", "#FFFFFF");
 	$("div.menu-item").click(function() {
 		$(".main-content").css("display", "none");
 		$(".main-content#" + this.id).css("display", "block");
@@ -116,6 +119,10 @@
 		$(".menu-item").css("border-top", "none");
 		$(".menu-item").css("background-color", "#EFEFEF");
 		$(".menu-item#" + this.id).css("background-color", "#FFFFFF");
+	})
+	$("div.incoming-person").click(function() {
+		$("div.incoming-person").css("background-color", "#EFEFEF");
+		$("div.incoming-person[id='" + this.id + "']").css("background-color", "#FFFFFF");
 	})
 </script>
 
