@@ -306,6 +306,7 @@ ul.cards-container .card-description p {
 
 #card-image-1 {
 	background-image: url("../static/img/cardImage1.jpg");
+	background-position-y: 40%;
 }
 
 #card-image-2 {
@@ -319,7 +320,8 @@ ul.cards-container .card-description p {
 
 #card-image-4 {
 	background-image: url("../static/img/cardImage4.jpg");
-	background-position: 77% 50%;
+	background-position: 50% 62%;
+	background-size: 340%;
 }
 
 #google-play-button-page-1 {
@@ -382,16 +384,20 @@ ul.cards-container .card-description p {
 }
 
 #card-image-5 {
-	background-image: url("../static/img/cardImage1.jpg");
+	background-image: url("../static/img/cardImage5.jpg");
+	background-position: 90% 50%;
+	background-size: cover;
 }
 
 #card-image-6 {
-	background-image: url("../static/img/cardImage2.jpg");
+	background-image: url("../static/img/cardImage6.jpg");
+	background-size: 130%;
+	background-position: 50% 64%;
 }
 
 #card-image-7 {
-	background-image: url("../static/img/cardImage3.jpg");
-	background-position: 50% 86%;
+	background-image: url("../static/img/cardImage7.jpg");
+	background-position: 30% 50%;
 }
 
 .page-two .page-details p {
