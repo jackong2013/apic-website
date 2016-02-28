@@ -227,6 +227,7 @@ input:hover {
 
 .page-one {
 	/*background-color: red;*/
+	height: 90vh;
 }
 
 .page-header {
@@ -325,7 +326,6 @@ ul.cards-container .card-description p {
 }
 
 #google-play-button-page-1 {
-	bottom: 1%;
 }
 
 .page-two {
