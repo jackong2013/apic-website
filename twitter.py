@@ -4,6 +4,7 @@ import requests
 from requests_oauthlib import OAuth1
 from urlparse import parse_qs
 import json
+from urllib import quote
 
 REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
 AUTHORIZE_URL = "https://api.twitter.com/oauth/authorize?oauth_token="
@@ -16,7 +17,7 @@ OAUTH_TOKEN = "355164055-LAEpWGYWDeeVtj7830ODlPP9IA7efaBbVLM1lDde"
 OAUTH_TOKEN_SECRET = "lLLaluUuI2YW6PIJ7r9iv1NK7ApSDLqx4qD0liQLH6IWE"
 
 
-SEARCH_URL = 'https://api.twitter.com/1.1/search/tweets.json?q="This lava cake is so yummy"'
+SEARCH_URL = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=chuesaihou'
 
 
 def setup_oauth():
@@ -60,7 +61,7 @@ def get_oauth():
 def get_posts():
 	oauth = get_oauth()
 	r = requests.get(url=SEARCH_URL, auth=oauth)
-	print json.dumps(r.json()['statuses'][0], sort_keys=True,
+	print json.dumps(r.json(), sort_keys=True,
                   indent=4, separators=(',', ': '))
 
 get_posts()
