@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/console.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="../static/Chart.min.js"></script>
@@ -95,16 +96,26 @@
 	<div class="main-content challenges-page" id="challenges">
 		<div class="challenge-header">
 			<div class="challenge-banner">
-				.challenge-banner
+				<h3>Challenges</h3>
+				<p>Set up photo challenges below. Create interesting challenges to boost your popularity and attract more people!</p>
+				<p>Also check out the Challenge Twitter feed on the side. It gives you real time updates on activities related to your challenges</p>
 			</div><div class="challenge-twitter-feed">
 				<a class="twitter-timeline" href="https://twitter.com/jackong2013" data-widget-id="703970471792943104" data-screen-name="chuesaihou" height="100%">Tweets by @jackong2013</a>
 			</div>
 		</div>
 		<div class="challenge-form-container">
 			<form action="" class="challenge-form">
+				<h4>Create a challenge!</h4>
 				<div class="photo-upload-container">
-					<input type="file" class="photo-upload">
+					<p><label>Challenge Photo: &nbsp;&nbsp;</label><input type="text" placeholder=" Drag a picture or click the upload button"> &nbsp;<button>Upload a picture</button></p>
+					<p><label>Challenge Title: &nbsp;&nbsp;</label><input type="text" placeholder=" e.g: Super Spicy Challenge!"></p>
+					<p><label>Challenge Description: &nbsp;&nbsp;</label><input type="text"></p>
+					<p><label>Start Date: &nbsp;&nbsp;</label><input type="date" placeholder=" mm/dd/yyyy"></p>
+					<p><label>Expiry Date: &nbsp;&nbsp;</label><input type="date" placeholder=" mm/dd/yyyy"></p>
+					<p class="hashtag-input"><label>Twitter hashtag: &nbsp;&nbsp;</label>#APic-<input type="text"></p>
 				</div>
+				<input class="challenge-submit-button" type="submit">
+				<br>
 			</form>
 		</div>
 
@@ -123,9 +134,9 @@
 	</div>
 
 <script type="text/javascript">
-	$(".main-content#my-space").css("display", "block");
-	$(".menu-item#my-space").css("background-color", "#4423A4");
-	$(".menu-item#my-space").css("color", "#fff");
+	$(".main-content#challenges").css("display", "block");
+	$(".menu-item#challenges").css("background-color", "#4423A4");
+	$(".menu-item#challenges").css("color", "#fff");
 	$("div.menu-item").click(function() {
 		$(".main-content").css("display", "none");
 		$(".main-content#" + this.id).css("display", "block");
