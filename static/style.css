@@ -27,11 +27,9 @@ body {
 	width: 100vw;
 	margin: 0;
 	opacity: 0.6;
-	background: rgb(102, 102, 204);
-	background: -webkit-linear-gradient(left top, #fff , rgb(102,102,204)); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, #fff, rgb(102,102,204)); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, #fff, rgb(102,102,204)); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, #fff, rgb(102,102,204)); /* Standard syntax */
+	background: #4423A4; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #5C258D , #4389A2); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #5C258D , #4389A2);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	position: absolute;
 	top: 0;
 }
@@ -75,7 +73,7 @@ body {
 
 .header-button:hover {
 	background-color: #fff;
-	color: rgb(102, 102, 204);
+	color: #4423A4;
 }
 
 .merchant-button:hover {
@@ -153,7 +151,7 @@ input:hover {
 
 .merchant-login-dropdown .login-button {
 	text-decoration: none;
-	background-color: rgb(102, 102, 204);
+	background-color: #4423A4;
 	color: #fff;
 	padding: 8px 40px 8px 40px;
 	border-radius: 2px;
@@ -167,7 +165,7 @@ input:hover {
 }
 
 .merchant-login-dropdown i {
-	color: rgba(102,102,204,1);
+	color: #4423A4;
 	padding: 2px;
 	background-color: rgb(236, 235, 235);
 	position: absolute;
@@ -198,9 +196,10 @@ input:hover {
 
 .welcome-text {
 	position: absolute;
-	top: 240px;
+	top: 50%;
 	left: 50%;
 	margin-left: -168px;
+	margin-top: -64px;
 	font-family: Century Gothic, sans-serif;
 	font-size: 2.5em;
 	color: #fff;
