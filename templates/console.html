@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ merchant }}'s Apic Space</title>
+	<link rel="stylesheet" type="text/css" href="../static/console.css">
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+
+<body>
+	<header class="console-header">
+		<div class="console-title">
+			<h1>
+				{{ merchant }}'s Apic Space
+			</h1>
+		</div>
+	</header>
+
+	<div class="console-menu">
+			<ul class="menu-list">
+				<li class="menu-item" id="my-space">
+					<div><img src="../static/img/ic_home_black_36dp.png"></div>
+					<div class="menu-option">My Space</div>
+				</li>
+				<li class="menu-item" id="challenges">
+					<div><img src="../static/img/ic_photo_filter_black_36dp.png"></div>
+					<div class="menu-option">Challenges</div>
+				</li>
+				<li class="menu-item" id="store">
+					<div><img src="../static/img/ic_store_black_36dp.png"></div>
+					<div class="menu-option">Store</div>
+				</li>
+				<li class="menu-item" id="analytics">
+					<div><img src="../static/img/ic_timeline_black_36dp.png"></div>
+					<div class="menu-option">Analytics</div>
+				</li>
+				<li class="menu-item" id="settings">
+					<div><img src="../static/img/ic_settings_black_36dp.png"></div>
+					<div class="menu-option">Settings</div>
+				</li>
+			</ul>
+	</div>
+
+	<div class="main-content" id="my-space">
+		<p>my-space</p>
+	</div>
+
+	<div class="main-content" id="challenges">
+		<p>challenges</p>
+	</div>
+
+	<div class="main-content" id="store">
+		<p>store</p>
+	</div>
+
+	<div class="main-content" id="analytics">
+		<p>analytics</p>
+	</div>
+
+	<div class="main-content" id="settings">
+		<p>settings</p>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(".main-content#my-space").css("display", "block");
+	$("li.menu-item").click(function() {
+		$(".main-content").css("display", "none");
+		$(".main-content#" + this.id).css("display", "block");
+	})
+</script>
+
+</html>
