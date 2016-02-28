@@ -3,23 +3,51 @@
 <head>
 	<title>APic</title>
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
 <body>
 
-	<div class="main-banner">
+	<div class="main banner">
 		<div class="main-banner-image"></div>
 		<div class="main-banner-overlay"></div>
 		<div class="header">
 			<div class="main-logo"></div>
 			<div class="header-button-container">
-				<button class="get-the-app-button">Get the app</button>
-				<button class="merchant-button">Merchant</button>
+				<a href="#" class="header-button get-the-app-button">Get the app</a>
+				<div class="header-button merchant-button dropdown-button-top">Merchant
+					<div class="merchant-login-dropdown">
+						<form action="">
+							<div class="input-container">
+								<i class="material-icons">account_box</i><input type="text" name="username" placeholder="Username">
+							</div>
+							<div class="input-container">
+								<i class="material-icons">https</i><input type="password" name="password" placeholder="Password">
+							</div>
+						</form>
+						<a href="#" class="login-button">Log in</a>
+						<hr class="merchant-login-divider">
+						<div class="register">
+							Not an APic merchant yet? <a href="#" style="text-decoration: none; color: rgb(102,102,204);">Sign up here</a>
+						</div>
+					</div>
+				</div>
+				
 			</div>
+
 		</div>
+		<div class="welcome-text">
+			<p>Welcome to APic</p>
+		</div>
+
+		<a href="https://play.google.com/store" class="google-play-button"></a>
 
 	</div>
 
+	<div class="main page-one">
+		
+	</div>
 </body>
 
 </html>
