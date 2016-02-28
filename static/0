@@ -69,7 +69,6 @@ body {
 	border-color: #fff;
 	border-style: solid;
 	padding: 8px;
-	outline: none;
 	-webkit-transition: background-color 0.3s ease;
 }
 
@@ -247,7 +246,7 @@ hr.horizontal-divider {
 .page-one ul {
 	list-style-type: none;
 	padding: 0;
-	margin-top: 1%;
+	margin-top: 5%;
 	text-align: center;
 }
 
@@ -256,13 +255,11 @@ ul.cards-container li {
 	position: relative;
 	vertical-align: middle;
 	height: 250px;
-	width: 30%;
-	max-width: 200px;
-	min-width: 150px;
-	margin: 5px 3% 0px 3%;
+	width: 20%;
+	max-width: 250px;
+	margin: 0px 5px 0px 5px;
 	border-radius: 4px;
-	/* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
-	/* overflow: hidden; */
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 ul.cards-container .card-arrow {
@@ -273,151 +270,15 @@ ul.cards-container .card-arrow {
 }
 
 ul.cards-container .card-description {
-	/* position: absolute; */
-	/* bottom: 0; */
+	position: absolute;
+	bottom: 0;
 	text-align: center;
 	height: 30%;
 	width: 100%;
-	/* padding-top: 10px; */
-}
-
-ul.cards-container .card-description h3 {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 600;
-	color: #4423A4;
-}
-
-ul.cards-container .card-description p {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 300;
-	color: #2F2F2F;
-}
-
-.card-image {
-	width: 100%;
-	height: 70%;
-	background-position: 50% 50%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-}
-
-#card-image-1 {
-	background-image: url("../static/img/cardImage1.jpg");
-}
-
-#card-image-2 {
-	background-image: url("../static/img/cardImage2.jpg");
-}
-
-#card-image-3 {
-	background-image: url("../static/img/cardImage3.jpg");
-	background-position: 50% 86%;
-}
-
-#card-image-4 {
-	background-image: url("../static/img/cardImage4.jpg");
-	background-position: 77% 50%;
-}
-
-#google-play-button-page-1 {
-	bottom: 1%;
-}
-
-.page-two {
-	background-image: url("../static/img/merchantPageImage.jpg");
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 50% 0%;
-}
-
-.page-two-overlay {
-	height: 100vh;
-	width: 100vw;
-	margin: 0;
-	opacity: 0.6;
-	background: #4423A4; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #5C258D , #4389A2); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #5C258D , #4389A2);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	position: absolute;
-	top: 0;
-	background-attachment: fixed;
-}
-
-.page-details-right {
-	vertical-align: top;
-	width: 49%;
-	position: absolute;
-	top: 0;
-	right: 16px;
-}
-
-.page-two .page-header {
-	color: #fff;
-	font-size: 2em;
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-}
-
-.page-two .horizontal-divider {
-	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
-	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
-}
-
-.page-two .cards-container {
-	display: inline-block;
-	width: 50%;
-	text-align: center;
-	height: 90%;
-	padding: 40px 0px 0px 0px;
-	margin: 0;
-}
-
-.page-two ul.cards-container .card-description h3 {
-	color: #fff;
-}
-
-#card-image-5 {
-	background-image: url("../static/img/cardImage1.jpg");
-}
-
-#card-image-6 {
-	background-image: url("../static/img/cardImage2.jpg");
-}
-
-#card-image-7 {
-	background-image: url("../static/img/cardImage3.jpg");
-	background-position: 50% 86%;
-}
-
-.page-two .page-details p {
-	text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
-	color: #fff;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-	font-size: 20px;
-}
-
-.page-two .page-details a {
-	text-decoration: none;
-	color: #fff;
-	font-family: Century Gothic, sans-serif;
-	position: absolute;
-	left: 50%;
-	margin-top: 20px;
-	margin-left: -117px;
-	border-radius: 6px;
-	border-width: 1px;
-	border-color: #fff;
-	border-style: solid;
-	padding: 8px;
-	outline: none;
-	-webkit-transition: background-color 0.3s ease;
-	font-size: 2em;
-}
-
-.page-two .page-details a:hover {
-	background-color: #fff;
-	color: #4423A4;
+	padding-top: 8px;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'Raleway', sans-serif;
+	border-top-color: rgba(0,0,0,0.5);
+	border-top-style: solid;
+	border-top-width: 1px;
 }
