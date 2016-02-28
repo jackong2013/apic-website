@@ -1,53 +1,72 @@
+body {
+	overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;	
+}
+
 /* header*/
 .console-header {
-	background-color: #F2F2F2;
-	border-bottom: 2px solid black;
+	background-color: #000000;
+	border-bottom: 1px solid #E0E0E0;
+	box-shadow: 0px 3px 5px #888888;
 	z-index: 1000;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 80px;
+	height: 60px;
 	padding-left: 50px;
 }
 
 .console-title {
-	font-family: "Great Vibes", cursive, sans-serif;
-    text-shadow: 5px 5px 8px #99CCFF;
-    height: 94px;
+	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+    text-shadow: 5px 5px 8px #CCFFFF;
+    font-size: 25px;
+    color: #FFFFFF;
+    height: 60px;
     position: absolute;
     top: 50%;
-    margin-top:	-47px;
+    margin-top:	-40px;
 }
 
 /*side menu*/
 .console-menu {
-	background-color: #F2F2F2;
+	background-color: #EFEFEF;
+	box-shadow: 2px 0px 3px #888888;
+	color: #655342;
 	position: fixed;
 	border-right: 2px solid black;
 	z-index: 500;
-	top: 80px;
+	top: 60px;
 	left: 0;
 	width: 200px;
 	height: 100%;
 }
 
 .menu-list {
-	font-family: "Great Vibes", cursive, sans-serif;
-	font-size: 20px;
-	padding-left: 20px;
+	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
+	font-size: 23px;
+	padding-left: 0;
 	padding-top: 0;
-	margin-top: 0;
-	width: 180px;
+	margin-top: 15px;
+}
+
+.menu-item {
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	-webkit-transition: background-color 0.3s ease;
 }
 
 .menu-list li {
 	list-style-type: none;
-	padding-top: 25px;
 }
 
-.menu-list li:hover {
+.menu-item:hover {
 	cursor: pointer;
+	background-color: #D0D0D0!important;
 }
 
 .menu-list img {
@@ -55,21 +74,53 @@
 	vertical-align: middle;
 	height: 40px;
 	width: 40px;
+	margin-left: 20px;
 }
 
 .menu-option {
-	margin-top: 5px;
-	margin-left: 45px;
+	padding-top: 7px;
+	margin-left: 70px;
 }
 
 /* Main Content */
 .main-content {
 	position: absolute;
 	display: none;
-	top: 80px;
+	top: 60px;
 	left: 200px;
 	width: 100%;
+	font-size: 50px;
+	padding-left: 0;
+	height: calc(100% - 60px);
+	overflow-y: hidden; 
+}
+
+.twitter-feed {
+	box-shadow: -2px 0px 3px #888888;
+	float: right;
+	margin-right: 200px;
+	height: 100%;
+	width: 500px;
+}
+
+.left-content {
+	float: left;
+	height: calc(100% - 70px);
+	width: calc(100% - 700px);
+}
+
+.incoming {
+	height: 400px;
+}
+
+.chart-heading {
+	margin: 0;
+	padding: 15px 0px 15px 10px;
 	font-size: 30px;
-	padding-left: 20px;
+}
+
+.chart-container {
+	padding: 0px 10px 0px 10px;
+	height: calc(100% - 400px);
 }
 

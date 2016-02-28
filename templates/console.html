@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{ merchant }}'s Apic Space</title>
+	<title>Chocolate Origin's Apic Space</title>
 	<link rel="stylesheet" type="text/css" href="../static/console.css">
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="../static/Chart.min.js"></script>
 </head>
 
 <body>
 	<header class="console-header">
 		<div class="console-title">
-			<h1>
-				{{ merchant }}'s Apic Space
-			</h1>
+			<p>
+				Chocolate Origin's Apic Space
+			</p>
 		</div>
 	</header>
 
 	<div class="console-menu">
 			<ul class="menu-list">
-				<li class="menu-item" id="my-space">
-					<div><img src="../static/img/ic_home_black_36dp.png"></div>
-					<div class="menu-option">My Space</div>
-				</li>
-				<li class="menu-item" id="challenges">
-					<div><img src="../static/img/ic_photo_filter_black_36dp.png"></div>
-					<div class="menu-option">Challenges</div>
-				</li>
-				<li class="menu-item" id="store">
-					<div><img src="../static/img/ic_store_black_36dp.png"></div>
-					<div class="menu-option">Store</div>
-				</li>
-				<li class="menu-item" id="analytics">
-					<div><img src="../static/img/ic_timeline_black_36dp.png"></div>
-					<div class="menu-option">Analytics</div>
-				</li>
-				<li class="menu-item" id="settings">
-					<div><img src="../static/img/ic_settings_black_36dp.png"></div>
-					<div class="menu-option">Settings</div>
-				</li>
+				<div class="menu-item" id="my-space">
+					<li id="my-space">
+						<div><img src="../static/img/ic_home_black_36dp.png"></div>
+						<div class="menu-option">My Space</div>
+					</li>
+				</div>
+				<div class="menu-item" id="challenges">
+					<li id="challenges">
+						<div><img src="../static/img/ic_photo_filter_black_36dp.png"></div>
+						<div class="menu-option">Challenges</div>
+					</li>
+				</div>
+				<div class="menu-item" id="store">
+					<li id="store">
+						<div><img src="../static/img/ic_store_black_36dp.png"></div>
+						<div class="menu-option">Store</div>
+					</li>
+				</div>
+				<div class="menu-item" id="analytics">
+					<li id="analytics">
+						<div><img src="../static/img/ic_timeline_black_36dp.png"></div>
+						<div class="menu-option">Analytics</div>
+					</li>
+				</div>
+				<div class="menu-item" id="settings">
+					<li id="settings">
+						<div><img src="../static/img/ic_settings_black_36dp.png"></div>
+						<div class="menu-option">Settings</div>
+					</li>
+				</div>
 			</ul>
 	</div>
 
 	<div class="main-content" id="my-space">
-		<p>my-space</p>
+		<div class="left-content">
+			<div class="incoming">
+				Jack is coming!
+			</div>
+			<h3 class="chart-heading">Impression</h3>
+			<div class="chart-container">
+				<canvas class="my-space-chart"></canvas>
+			</div>
+		</div>
+		<div class="twitter-feed">
+			<a class="twitter-timeline" href="https://twitter.com/jackong2013/timelines/703791948604133376" data-widget-id="703792895535394816" height="100%" data-chrome="noheader"></a>
+		</div>
 	</div>
 
 	<div class="main-content" id="challenges">
@@ -64,10 +86,61 @@
 
 <script type="text/javascript">
 	$(".main-content#my-space").css("display", "block");
-	$("li.menu-item").click(function() {
+	$(".menu-item#my-space").css("background-color", "#FFFFFF");
+	$("div.menu-item").click(function() {
 		$(".main-content").css("display", "none");
 		$(".main-content#" + this.id).css("display", "block");
+		$(".menu-item").css("box-shadow", "none");
+		$(".menu-item").css("border-top", "none");
+		$(".menu-item").css("background-color", "#EFEFEF");
+		$(".menu-item#" + this.id).css("background-color", "#FFFFFF");
 	})
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
+<script>
+	var data = {
+	    labels: ["2016-02-22", "2016-02-23", "2016-02-24", "2016-02-25", "2016-02-26", "2016-02-27", "2016-02-28"],
+	    datasets: [
+	        {
+	            label: "Total",
+	            fillColor: "rgba(220,220,220,0.2)",
+	            strokeColor: "rgba(220,220,220,1)",
+	            pointColor: "rgba(220,220,220,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(220,220,220,1)",
+	            data: [103, 85, 101, 118, 118, 131, 157]
+	        },
+	        {
+	            label: "Likes",
+	            fillColor: "rgba(181,181,181,0.2)",
+	            strokeColor: "rgba(181,181,181,1)",
+	            pointColor: "rgba(181,181,181,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(181,181,181,1)",
+	            data: [83, 70, 80, 94, 96, 105, 126]
+	        },
+	        {
+	            label: "Posts",
+	            fillColor: "rgba(140,140,140,0.2)",
+	            strokeColor: "rgba(140,140,140,1)",
+	            pointColor: "rgba(140,140,140,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(140,140,140,1)",
+	            data: [20, 15, 21, 24, 22, 26, 31]
+	        }
+	    ]
+	};
+	var ctx = $(".my-space-chart").get(0).getContext("2d");
+	var myLineChart = new Chart(ctx).Line(data, {
+		responsive: true,
+		maintainAspectRatio: false
+	});
 </script>
 
 </html>
