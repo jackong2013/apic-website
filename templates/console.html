@@ -3,9 +3,12 @@
 <head>
 	<title>{{ data.name }}'s Apic Space</title>
 	<link rel="stylesheet" type="text/css" href="../static/console.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="../static/Chart.min.js"></script>
+
 </head>
 
 <body>
@@ -25,32 +28,34 @@
 			<ul class="menu-list">
 				<div class="menu-item" id="my-space">
 					<li id="my-space">
-						<div><img src="../static/img/ic_home_black_36dp.png"></div>
-						<div class="menu-option">My Space</div>
+						<!-- <div>
+							<img src="../static/img/ic_home_black_36dp.png">
+						</div> -->
+						<div class="menu-option"><i class="material-icons">home</i>&nbsp;My Space</div>
 					</li>
 				</div>
 				<div class="menu-item" id="challenges">
 					<li id="challenges">
-						<div><img src="../static/img/ic_photo_filter_black_36dp.png"></div>
-						<div class="menu-option">Challenges</div>
+						<!-- <div><img src="../static/img/ic_photo_filter_black_36dp.png"></div> -->
+						<div class="menu-option"><i class="material-icons">photo_filter</i>&nbsp;Challenges</div>
 					</li>
 				</div>
 				<div class="menu-item" id="store">
 					<li id="store">
-						<div><img src="../static/img/ic_store_black_36dp.png"></div>
-						<div class="menu-option">Store</div>
+						<!-- <div><img src="../static/img/ic_store_black_36dp.png"></div> -->
+						<div class="menu-option"><i class="material-icons">store</i>&nbsp;Store</div>
 					</li>
 				</div>
 				<div class="menu-item" id="analytics">
 					<li id="analytics">
-						<div><img src="../static/img/ic_timeline_black_36dp.png"></div>
-						<div class="menu-option">Analytics</div>
+						<!-- <div><img src="../static/img/ic_timeline_black_36dp.png"></div> -->
+						<div class="menu-option"><i class="material-icons">timeline</i>&nbsp;Analytics</div>
 					</li>
 				</div>
 				<div class="menu-item" id="settings">
 					<li id="settings">
-						<div><img src="../static/img/ic_settings_black_36dp.png"></div>
-						<div class="menu-option">Settings</div>
+						<!-- <div><img src="../static/img/ic_settings_black_36dp.png"></div> -->
+						<div class="menu-option"><i class="material-icons">settings</i>&nbsp;Settings</div>
 					</li>
 				</div>
 			</ul>
@@ -122,15 +127,25 @@
 
 <script type="text/javascript">
 	$(".main-content#my-space").css("display", "block");
-	$(".menu-item#my-space").css("background-color", "#FFFFFF");
+	$(".menu-item#my-space").css("background-color", "#4423A4");
+	$(".menu-item#my-space").css("color", "#fff");
 	$("div.menu-item").click(function() {
 		$(".main-content").css("display", "none");
 		$(".main-content#" + this.id).css("display", "block");
 		$(".menu-item").css("box-shadow", "none");
 		$(".menu-item").css("border-top", "none");
 		$(".menu-item").css("background-color", "#EFEFEF");
-		$(".menu-item#" + this.id).css("background-color", "#FFFFFF");
+		$(".menu-item").css("color", "#2F2F2F");
+		$(".menu-item#" + this.id).css("background-color", "#4423A4");
+		$(".menu-item#" + this.id).css("color", "#fff");
+		$(this).addClass('no-hover'); // add the class 'no-hover'
 	})
+	$(".menu-item").on({
+     mouseleave: function(){
+     	if ($(this).hasClass('no-hover')) {
+     		$(this).removeClass('no-hover');	
+     	};
+    }});
 </script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
