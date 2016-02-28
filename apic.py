@@ -1,6 +1,6 @@
 from flask import Flask, url_for, render_template, request
 import requests
-import twitter as twit
+# import twitter as twit
 
 app = Flask(__name__)
 
@@ -38,7 +38,7 @@ def console_page():
     return render_template('console.html', data=MERCHANT_DATA)
 
 
-@app.route('/challenge/<merchant_id>', method='POST')
+@app.route('/challenge/<merchant_id>', methods='POST')
 def new_challenge(merchant_id):
     data = { "merchant_id": merchant_id,
     "_title": request.args.get('photo'),
@@ -50,7 +50,7 @@ def new_challenge(merchant_id):
     insert_into_table("challenges", data)
     twit.post_challenge(merchant_id, data)
 
-@app.route('/coupon/<merchant_id>', method='POST')
+@app.route('/coupon/<merchant_id>', methods='POST')
 def new_coupon(merchant_id):
     data = { 
         "merchant_id": merchant_id,
@@ -66,7 +66,7 @@ def new_coupon(merchant_id):
     insert_into_table("coupons", data)
     twit.post_coupon(merchant_id, data)
 
-@app.route('/uber/<user_id>/<merchant_id>/<request_id>', method='POST')
+@app.route('/uber/<user_id>/<merchant_id>/<request_id>', methods='POST')
 def request_uber(user_id, merchant_id, request_id):
     data = {
         "user_id": user_id,

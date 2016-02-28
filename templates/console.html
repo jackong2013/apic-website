@@ -51,6 +51,10 @@
 					<li id="settings">
 						<div class="menu-option"><i class="material-icons">settings</i>&nbsp;Settings</div>
 					</li>
+				</div><div class="menu-item" id="chat">
+					<li id="chat">
+						<div class="menu-option"><i class="material-icons">chat</i>&nbsp;Chats</div>
+					</li>
 				</div>
 			</ul>
 	</div>
@@ -68,6 +72,7 @@
 										<div class="incoming-desc">
 											<p><span class="incoming-name">{{ person.name }}</span> and {{ person.friend }} other friends arriving in<span class='arriving-in'> {{ person.eta }} minutes</span>!!</p>
 										</div>
+										<div class="chat" id="{{ person.name }}"><i class="material-icons">chat</i></div>
 									</li>
 								</div>
 							{% endfor %}
@@ -121,6 +126,36 @@
 
 	</div>
 
+	<div class="main-content" id="chat">
+	</div>
+
+	<div class="chatroom" id="chat">
+		<div class="contacts">
+			<ul class="contacts-list">
+				{% for person in data.incoming %}
+					<div class="contact" id="{{ person.name }}">
+						<li>
+							<img src="../static/img/{{ person.img }}" class="contact-pic">
+							<div class="contact-name">
+								<p>{{ person.name }}</p>
+							</div>
+						</li>
+					</div>
+				{% endfor %}
+			</ul>
+		</div><div class="chatbox">
+			<div class="chathead">
+				<p>Start a chat now while your customer is on his/her way here!</p>
+			</div>
+			<div class="messages">
+			</div>
+			<div class="textbox">
+				<textarea id="txtarea" cols="110" rows="5" placeholder="Say something while he/she is on the way!"></textarea>
+				<button class="send">Send</button>
+			</div>
+		</div>
+	</div>
+
 	<div class="main-content" id="store">
 		<p>store</p>
 	</div>
@@ -134,15 +169,15 @@
 	</div>
 
 <script type="text/javascript">
-	$(".main-content#challenges").css("display", "block");
-	$(".menu-item#challenges").css("background-color", "#4423A4");
-	$(".menu-item#challenges").css("color", "#fff");
+	$(".main-content#my-space").css("display", "block");
+	$(".chatroom").css("display", "none");
+	$(".menu-item#my-space").css("background-color", "#4423A4");
+	$(".menu-item#my-space").css("color", "#fff");
 	$("div.menu-item").click(function() {
 		$(".main-content").css("display", "none");
+		$(".chatroom").css("display", "none");
 		$(".main-content#" + this.id).css("display", "block");
-		$(".menu-item").css("box-shadow", "none");
-		$(".menu-item").css("border-top", "none");
-		$(".menu-item").css("background-color", "#EFEFEF");
+		$(".chatroom#" + this.id).css("display", "block");		$(".menu-item").css("background-color", "#EFEFEF");
 		$(".menu-item").css("color", "#2F2F2F");
 		$(".menu-item#" + this.id).css("background-color", "#4423A4");
 		$(".menu-item#" + this.id).css("color", "#fff");
@@ -154,6 +189,38 @@
      		$(this).removeClass('no-hover');	
      	};
     }});
+
+	$("div.chat").click(function() {
+		$(".main-content").css("display", "none");
+		$(".main-content#my-space").css("display", "block");
+		$(".main-content#chat").css("display", "block");
+		$(".main-content#chat").css("background-color", "grey");
+		$(".main-content#chat").css("opacity", "0.5");
+		$(".main-content#chat").css("z-index", "300");
+		$(".chatroom").css("display", "block");
+		$(".menu-item").css("background-color", "#EFEFEF");
+		$(".menu-item").css("color", "#2F2F2F");
+		$(".menu-item#chat").css("background-color", "#4423A4");
+		$(".menu-item#chat").css("color", "#fff");
+		$(".menu-item#chat").addClass('no-hover');
+		$(".contact[id='" + this.id + "']").css("background-color", "rgba(67,137,162,0.4)");
+	})
+
+	$(".main-content#chat").click(function() {
+		$(".main-content#my-space").css("display", "block");
+		$(".main-content#chat").css("display", "none");
+		$(".chatroom#chat").css("display", "none");
+		$(".menu-item#chat").css("background-color", "#EFEFEF");
+		$(".menu-item#chat").css("color", "#2F2F2F");
+		$(".menu-item#my-space").css("background-color", "#4423A4");
+		$(".menu-item#my-space").css("color", "#fff");
+		$(".contact").css("background-color", "#f2f2f2");
+	})
+
+	$(".contact").click(function() {
+		$(".contact").css("background-color", "#f2f2f2");
+		$(this).css("background-color", "rgba(67,137,162,0.4)");
+	})
 </script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6, p , button{
 	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;	
 }
 
+.chathead p {
+     margin: 0; 
+}
+
 /* header*/
 .console-header {
 	background-color: #4423A4;
@@ -220,6 +224,23 @@ a.light {
 	display: inline-block;
 }
 
+.chat {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+}
+
+.chat:hover {
+	cursor: pointer;
+}
+
+.chat i{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 36px;
+	width: 20%;
+}
+
 .incoming-person li{
 	list-style-type: none;
 	height: 80px;
@@ -383,5 +404,129 @@ form.challenge-form {
 }
 
 .challenge-form input.challenge-submit-button:hover {
+	cursor: pointer;
+}
+
+/* Chatroom */
+
+.chatroom {
+	position: absolute;
+	margin-left: 20%;
+	margin-top: 7%;
+	width: 70%;
+	height: 80%;
+	z-index: 1000;
+	background-color: white;
+	opacity: 1;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.contacts {
+	margin-right: 0;
+	width: 250px;
+	height: 100%;
+	overflow: scroll;
+	border-right: 1px solid #F2F2F2;
+	display: inline-block;
+	background-color: #f2f2f2;
+}
+
+.contacts-list {
+	margin: 0px;
+	height: 100%;
+	padding: 0;
+}
+
+.contact {
+	margin: 0;
+	vertical-align: middle;
+	padding: 15px;
+}
+
+.contacts li {
+	list-style-type: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.contact-pic {
+	height: 50px;
+	padding: 5px;
+	vertical-align: middle;
+	/* padding-left: 5px; */
+	/* padding-top: 5px; */
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.contact-name {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.contact:hover {
+	cursor: pointer;
+}
+
+.chatbox {
+	display: inline-block;
+	width: calc(100% - 251px);
+	height: 100%;
+	vertical-align: top;
+}
+
+.chathead {
+	height: 50px;
+	padding: 0px;
+	padding-top: 24px;
+	font-size: 20px;
+	text-align: center;
+	border-bottom: 1px solid #F2F2F2;
+	background-color: #E5E9EC;
+}
+
+.chathead p {
+    margin: 0;
+}
+
+.messages {
+	width: 100%;
+	height: 75%;
+}
+
+.textbox {
+	height: calc(25% - 70px);
+	border-top: 1px solid #E2E2E2;
+	width: 100%;
+}
+
+#txtarea {
+	text-align: left;
+	font-size: 20px;
+	padding: 5px;
+	margin: 0px;
+	width: 100%;
+	height: 60%;
+	border: none;
+	outline: none;
+}
+
+.send {
+	/* float: right; */
+	/* margin-right: 50px; */
+	/* margin-bottom: 20px; */
+	padding: 8px 22px 8px 22px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	font-size: 20px;
+	border: 1px solid #F2F2F2;
+	background-color: rgba(67, 137, 162, 0.4);
+	border-radius: 4px;
+	outline: none;
+}
+
+.send:hover {
 	cursor: pointer;
 }
