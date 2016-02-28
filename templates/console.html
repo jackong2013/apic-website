@@ -28,33 +28,26 @@
 			<ul class="menu-list">
 				<div class="menu-item" id="my-space">
 					<li id="my-space">
-						<!-- <div>
-							<img src="../static/img/ic_home_black_36dp.png">
-						</div> -->
 						<div class="menu-option"><i class="material-icons">home</i>&nbsp;My Space</div>
 					</li>
 				</div>
 				<div class="menu-item" id="challenges">
 					<li id="challenges">
-						<!-- <div><img src="../static/img/ic_photo_filter_black_36dp.png"></div> -->
 						<div class="menu-option"><i class="material-icons">photo_filter</i>&nbsp;Challenges</div>
 					</li>
 				</div>
 				<div class="menu-item" id="store">
 					<li id="store">
-						<!-- <div><img src="../static/img/ic_store_black_36dp.png"></div> -->
 						<div class="menu-option"><i class="material-icons">store</i>&nbsp;Store</div>
 					</li>
 				</div>
 				<div class="menu-item" id="analytics">
 					<li id="analytics">
-						<!-- <div><img src="../static/img/ic_timeline_black_36dp.png"></div> -->
 						<div class="menu-option"><i class="material-icons">timeline</i>&nbsp;Analytics</div>
 					</li>
 				</div>
 				<div class="menu-item" id="settings">
 					<li id="settings">
-						<!-- <div><img src="../static/img/ic_settings_black_36dp.png"></div> -->
 						<div class="menu-option"><i class="material-icons">settings</i>&nbsp;Settings</div>
 					</li>
 				</div>
@@ -70,8 +63,11 @@
 							{% for person in data.incoming %}
 								<div class="incoming-person" id="{{ person.name }}">
 									<li>
-										<p>{{ person.name }} </p>
-										<p class='arriving-in'><span> arriving in </span>{{ person.eta }}</p></li>
+										<img src="../static/img/{{ person.img }}" class="profile-pic">
+										<div class="incoming-desc">
+											<p><span class="incoming-name">{{ person.name }}</span> and {{ person.friend }} other friends arriving in<span class='arriving-in'> {{ person.eta }} minutes</span>!!</p>
+										</div>
+									</li>
 								</div>
 							{% endfor %}
 						</ul>

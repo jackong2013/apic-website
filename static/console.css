@@ -175,54 +175,62 @@ a.light {
 
 .incoming {
 	height: 100%;
-	width: 250px;
+	width: auto;
 	box-shadow: 3px 0px 2px -2px #888888;
 	overflow-y: hidden;
 }
 
 .incoming-list {
-	background-color: #EFEFEF;
 	margin: 0px;
 	height: 100%;
 	padding: 0px;
 	overflow-y: scroll;
 }
 
-.arriving-in {
-	text-align: right;
-}
-
-.arriving-in span{
-	font-size: 15px;
-}
-
 .incoming-person {
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 10px;
+	background-color: #EFEFEF;
 	height: 80px;
 	width: auto;
-	margin: 0px;
-	padding-top: 15px;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin: 20px;
+	padding: 0px;
 	font-size: 20px;
-	border-top: 1px solid black 
-}
-
-.incoming-person:first-of-type {
-	border-top: 0px;
-}
-
-.incoming-person:hover {
-	cursor: pointer;
+	border: 1px solid black 
 }
 
 .incoming-person p{
+	vertical-align: middle;
 	margin: 0;
 	padding: 0;
+	padding-left: 30px;
 	font-size: 22px;
+}
+
+.profile-pic {
+	float: left;
+	height: 70px;
+	width: 70px;
+	padding: 0px;
+	border-radius: 50%;
 }
 
 .incoming-person li{
 	list-style-type: none;
+	height: 80px;
+	padding: 5px;
+	padding-left: 20px;
+	width: 100%;
+}
+
+.incoming-desc {
+	height: 60px;
+	padding: 20px;
+	padding-left: 60px;
+}
+
+.incoming-name, .arriving-in {
+	font-weight: bold;
 }
 
 .bottom-left {
