@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5, h6, p {
 	top: 60px;
 	left: 0;
 	width: 200px;
+	min-width: 200px;
 	height: 100%;
 }
 
@@ -95,32 +96,97 @@ h1, h2, h3, h4, h5, h6, p {
 	overflow-y: hidden; 
 }
 
+/* My Space */
 .twitter-feed {
 	box-shadow: -2px 0px 3px #888888;
-	float: right;
-	margin-right: 200px;
+	display: inline-block;
 	height: 100%;
-	width: 500px;
+	width: 450px;
+	min-width: 450px;
 }
 
 .left-content {
-	float: left;
-	height: calc(100% - 70px);
-	width: calc(100% - 700px);
+	display: inline-block;
+	height: 100%;
+	overflow: scroll;
+	background-color: #F2F2F2;
+	width: 53%;
+}
+
+.top-left {
+	height: 450px;
+}
+
+.incoming-container {
+	height: 400px;
+	margin: 25px 25px 0px 25px;
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 10px;
+	border: 1px solid #888888;
 }
 
 .incoming {
-	height: 400px;
+	height: 100%;
+	width: 250px;
+	box-shadow: 3px 0px 2px -2px #888888;
+	overflow-y: hidden;
 }
 
-.chart-heading {
+.incoming-list {
+	margin: 0px;
+	padding: 0px;
+}
+
+.incoming-person {
+	height: 80px;
+	width: auto;
+	margin: 0px;
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: 20px;
+	border-top: 1px solid black 
+}
+
+.incoming-person:first-of-type {
+	border-top: 0px;
+}
+
+.incoming-person p{
 	margin: 0;
-	padding: 15px 0px 15px 10px;
-	font-size: 30px;
+	padding: 0;
+	font-size: 22px;
+}
+
+.incoming-person li{
+	list-style-type: none;
+}
+
+.bottom-left {
+	position: absolute;
+	top: 425px;
+	height: 550px;
 }
 
 .chart-container {
+	height: 500px;
+	margin: 25px;
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 10px;
+	border: 1px solid #888888;
+}
+
+.chart-heading-container {
+	height: 60px;	
+}
+
+.chart-heading {
+	height: 50px;
+	margin: 15px;
+	font-size: 25px;
+}
+
+.line-container {
 	padding: 0px 10px 0px 10px;
-	height: calc(100% - 400px);
+	height: 400px;
 }
 

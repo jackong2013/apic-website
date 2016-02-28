@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chocolate Origin's Apic Space</title>
+	<title>{{ data.name }}'s Apic Space</title>
 	<link rel="stylesheet" type="text/css" href="../static/console.css">
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -12,7 +12,7 @@
 	<header class="console-header">
 		<div class="console-title">
 			<p>
-				Chocolate Origin's Apic Space
+				{{ data.name }}'s Apic Space
 			</p>
 		</div>
 	</header>
@@ -54,12 +54,30 @@
 
 	<div class="main-content" id="my-space">
 		<div class="left-content">
-			<div class="incoming">
-				Jack is coming!
+			<div class="top-left">
+				<div class="incoming-container">
+					<div class="incoming">
+						<ul class="incoming-list">
+							{% for person in data.incoming %}
+								<div class="incoming-person">
+									<li id="{{ person.name }}"><p>{{ person.name }} arriving in {{ person.eta }}</p></li>
+								</div>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="incoming-active">
+					</div>
+				</div>
 			</div>
-			<h3 class="chart-heading">Impression</h3>
-			<div class="chart-container">
-				<canvas class="my-space-chart"></canvas>
+			<div class="bottom-left">
+				<div class="chart-container">
+					<div class="chart-heading-container">
+						<h3 class="chart-heading">Woohoo! You have 953 impressions!!</h3>
+					</div>
+					<div class="line-container">
+						<canvas class="my-space-chart"></canvas>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="twitter-feed">
@@ -102,7 +120,7 @@
 
 <script>
 	var data = {
-	    labels: ["2016-02-22", "2016-02-23", "2016-02-24", "2016-02-25", "2016-02-26", "2016-02-27", "2016-02-28"],
+	    labels: ["2016-02-20", "2016-02-21", "2016-02-22", "2016-02-23", "2016-02-24", "2016-02-25", "2016-02-26", "2016-02-27", "2016-02-28"],
 	    datasets: [
 	        {
 	            label: "Total",
@@ -112,7 +130,7 @@
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(220,220,220,1)",
-	            data: [103, 85, 101, 118, 118, 131, 157]
+	            data: [61, 79, 103, 85, 101, 118, 118, 131, 157]
 	        },
 	        {
 	            label: "Likes",
@@ -122,7 +140,7 @@
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(181,181,181,1)",
-	            data: [83, 70, 80, 94, 96, 105, 126]
+	            data: [49, 62, 83, 70, 80, 94, 96, 105, 126]
 	        },
 	        {
 	            label: "Posts",
@@ -132,7 +150,7 @@
 	            pointStrokeColor: "#fff",
 	            pointHighlightFill: "#fff",
 	            pointHighlightStroke: "rgba(140,140,140,1)",
-	            data: [20, 15, 21, 24, 22, 26, 31]
+	            data: [12, 17, 20, 15, 21, 24, 22, 26, 31]
 	        }
 	    ]
 	};
