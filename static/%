@@ -259,7 +259,7 @@ ul.cards-container li {
 	width: 30%;
 	max-width: 200px;
 	min-width: 150px;
-	margin: 5px 3% 0px 3%;
+	margin: 0px 3% 0px 3%;
 	border-radius: 4px;
 	/* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
 	/* overflow: hidden; */
@@ -325,32 +325,16 @@ ul.cards-container .card-description p {
 }
 
 .page-two {
-	background-image: url("../static/img/merchantPageImage.jpg");
+	/*background-image: url("../static/img/cardImage1.jpg");*/
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: 50% 0%;
 }
 
-.page-two-overlay {
-	height: 100vh;
-	width: 100vw;
-	margin: 0;
-	opacity: 0.6;
-	background: #4423A4; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #5C258D , #4389A2); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #5C258D , #4389A2);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	position: absolute;
-	top: 0;
-	background-attachment: fixed;
-}
-
-.page-details-right {
+.page-two .page-details-right {
+	display: inline-block;
 	vertical-align: top;
 	width: 49%;
-	position: absolute;
-	top: 0;
-	right: 16px;
 }
 
 .page-two .page-header {
@@ -360,21 +344,25 @@ ul.cards-container .card-description p {
 }
 
 .page-two .horizontal-divider {
-	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
-	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
+	
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
 }
 
 .page-two .cards-container {
 	display: inline-block;
 	width: 50%;
 	text-align: center;
-	height: 90%;
+	height: 100%;
 	padding: 40px 0px 0px 0px;
 	margin: 0;
 }
 
 .page-two ul.cards-container .card-description h3 {
+	text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+}
+
+.page-two ul.cards-container .card-description p {
+	text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
 	color: #fff;
 }
 
@@ -389,32 +377,4 @@ ul.cards-container .card-description p {
 #card-image-7 {
 	background-image: url("../static/img/cardImage3.jpg");
 	background-position: 50% 86%;
-}
-
-.page-two .page-details p {
-	text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
-	color: #fff;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 300;
-}
-
-.page-two .page-details a {
-	text-decoration: none;
-	color: #fff;
-	font-family: Century Gothic, sans-serif;
-	margin-left: 30%;
-	margin-top: 6%;
-	display: inline-block;
-	border-radius: 6px;
-	border-width: 1px;
-	border-color: #fff;
-	border-style: solid;
-	padding: 8px;
-	outline: none;
-	-webkit-transition: background-color 0.3s ease;
-}
-
-.page-two .page-details a:hover {
-	background-color: #fff;
-	color: #4423A4;
 }
