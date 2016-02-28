@@ -44,7 +44,7 @@ body {
 }
 
 .main-logo {
-	background-image:url("https://biologicalindicators.mesalabs.com/wp-content/uploads/sites/31/2014/06/Apic-logo.png");
+	background-image:url("../static/img/apic-logo.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 100%;
