@@ -406,7 +406,7 @@ ul.cards-container .card-description p {
 	position: absolute;
 	left: 50%;
 	margin-top: 20px;
-	margin-left: -63px;
+	margin-left: -117px;
 	border-radius: 6px;
 	border-width: 1px;
 	border-color: #fff;
@@ -414,6 +414,7 @@ ul.cards-container .card-description p {
 	padding: 8px;
 	outline: none;
 	-webkit-transition: background-color 0.3s ease;
+	font-size: 2em;
 }
 
 .page-two .page-details a:hover {
